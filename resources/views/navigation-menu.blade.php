@@ -149,6 +149,15 @@
             <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('home.index') }}" :active="request()->routeIs('home.index')">
+                {{ __('Home') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('services.index') }}" :active="request()->routeIs('services.index')">
+                {{ __('Services') }}
+            </x-jet-responsive-nav-link>
+                        <x-jet-responsive-nav-link href="{{ route('get-haircut.index') }}" :active="request()->routeIs('get-haircut.index')">
+                {{ __('Get Haircut') }}
+            </x-jet-responsive-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->
