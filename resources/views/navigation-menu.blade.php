@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-gray-400 shadow-2xl border-b border-gray-500">
+<nav x-data="{ open: false }" class="bg-gray-100 shadow-2xl border-b border-gray-300">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -83,8 +83,8 @@
                     <x-jet-dropdown align="right" width="48">
                         <x-slot name="trigger">
                             @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                                <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
-                                    <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
+                                <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-purple-200 transition">
+                                    <img class="h-8 w-8 rounded-full shadow-2xl border-2 object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                                 </button>
                             @else
                                 <span class="inline-flex rounded-md">
