@@ -1,5 +1,5 @@
 <a href="/">
-    <svg class="h-48 w-36" version="1.0" xmlns="http://www.w3.org/2000/svg"
+    <svg class="h-48 w-36 text-white" version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="933.000000pt" height="1280.000000pt" viewBox="0 0 933.000000 1280.000000"
  preserveAspectRatio="xMidYMid meet">
 
