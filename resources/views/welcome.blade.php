@@ -47,7 +47,7 @@
         <div class="w-full container mx-auto">
             <div class="w-full flex items-center justify-between">
                 <a class="flex items-center text-indigo-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
-                    href="#">
+                    href="">
                     Barber<span
                         class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">MDE</span>
                 </a>
@@ -73,7 +73,7 @@
         </div>
 
         <!--Main-->
-        <div class="container pt-24 md:pt-12 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+        <div class="container pt-4 md:pt-12 mx-auto flex flex-wrap flex-col md:flex-row items-center">
             <!--Left Col-->
             <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
                 <h1
@@ -118,13 +118,15 @@
                     </div>
 
                     <div class="flex items-center justify-end mt-4">
-                        @if (Route::has('password.request'))
-                            <a class="underline text-sm text-gray-600 hover:text-gray-900 dark:text-gray-200" href="{{ route('password.request') }}">
+                        <div class="mr-4">
+                            @if (Route::has('password.request'))
+                            <a class="underline text-sm text-indigo-400 hover:text-indigo-700 duration-300 dark:text-gray-200" href="{{ route('password.request') }}">
                                 {{ __('Forgot your password?') }}
                             </a>
                         @endif
+                        </div>
 
-                        <x-jet-button class="ml-4">
+                        <x-jet-button class="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out">
                             {{ __('Log in') }}
                         </x-jet-button>
                     </div>
@@ -133,23 +135,18 @@
 
             <!--Right Col-->
             <div class="w-full order-first xl:w-3/5 p-12 overflow-hidden">
-                <img class="mx-auto w-full md:w-3/5 sm:w-2/5 transform -rotate-6 transition hover:scale-105 duration-700 ease-in-out hover:rotate-6"
+                <img class="mx-auto w-full md:w-3/5 sm:w-2/5  transform -rotate-6 transition hover:scale-105 duration-700 ease-in-out hover:rotate-6"
                     src="./images/appLogo.svg" />
             </div>
 
-            <div class="mx-auto md:pt-16">
+            <div class="mx-auto md:pt-16 pt-24">
                 <p class="text-blue-400 font-bold pb-8 lg:pb-6 text-center">
                     Download our app:
                 </p>
-                <div class="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
+                <div class="flex w-full justify-center md:justify-start lg:pb-6 pb-8 fade-in">
                     <img src="./images/appstore.svg" class="h-12 pr-12 transform hover:scale-125 duration-300 ease-in-out" />
                     <img src="./images/playstore.svg" class="h-12 transform hover:scale-125 duration-300 ease-in-out" />
                 </div>
-            </div>
-
-            <!--Footer-->
-            <div class="w-full pt-16 pb-6 text-sm text-center md:text-left fade-in">
-
             </div>
         </div>
     </div>
