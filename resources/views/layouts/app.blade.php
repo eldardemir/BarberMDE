@@ -18,24 +18,34 @@
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased" style="background-image: url('./images/background.jpg')">
         <x-jet-banner />
 
-        <div class="min-h-screen bg-gray-100">
+        <div class="min-h-screen">
             @livewire('navigation-menu')
 
             <!-- Page Heading -->
             @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
+                <header>
+                    <div class="w-full shadow-2xl font-bold text-2xl backdrop-blur-2xl mx-auto py-6 px-4 sm:px-6 lg:px-8 border-b border-gray-700">
+                        <div class="container mx-auto flex justify-center text-gray-200">
+                            {{ $header }}
+                        </div>
                     </div>
                 </header>
             @endif
 
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                <div class="py-12">
+                    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                        <div class="bg-gray-800 lg:mx-0 mx-5 shadow-2xl overflow-hidden rounded-lg">
+                            <div class="p-2 text-md text-gray-200 font-semibold flex justify-center mt-2">
+                                {{$slot}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
 

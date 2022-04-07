@@ -40,7 +40,7 @@
     </style>
 </head>
 
-<body class="leading-normal tracking-normal text-indigo-400 m-6 bg-cover bg-fixed"
+<body class="leading-normal backdrop-blur-xl tracking-normal text-indigo-400 m-6 bg-cover bg-fixed"
     style="background-image: url('./images/header.png');">
     <div class="h-full">
         <!--Nav-->
@@ -117,23 +117,27 @@
                         </label>
                     </div>
 
-                    <div class="flex items-center justify-end mt-4">
+                    <div class="flex items-center justify-start mt-4">
                         <div class="mr-4">
                             @if (Route::has('password.request'))
                             <a class="underline text-sm text-indigo-400 hover:text-indigo-700 duration-300 dark:text-gray-200" href="{{ route('password.request') }}">
                                 {{ __('Forgot your password?') }}
                             </a>
+                            <a class="underline text-sm text-indigo-400 ml-6 hover:text-indigo-700 duration-300 dark:text-gray-200" href="/register">
+                                {{ __('Register') }}
+                            </a>
                         @endif
-                        <a class="underline text-sm text-indigo-400 ml-3 hover:text-indigo-700 duration-300 dark:text-gray-200" href="/register">
-                            {{ __('Register') }}
-                        </a>
+
                         </div>
 
-                        <x-jet-button class="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out">
+                    </div>
+                    <div class="flex justify-end lg:mt-1 mt-3">
+                        <x-jet-button class="bg-gradient-to-r w-full lg:w-1/3 md:w-1/3 from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out">
                             {{ __('Log in') }}
                         </x-jet-button>
                     </div>
                 </form>
+
             </div>
 
             <!--Right Col-->
