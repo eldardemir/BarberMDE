@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-gray-100 shadow-2xl border-b border-gray-300">
+<nav style="background-image: url('./images/header.png');"   x-data="{ open: false }" class="shadow-2xl">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -101,7 +101,7 @@
 
                         <x-slot name="content">
                             <!-- Account Management -->
-                            <div class="block px-4 py-2 text-xs text-gray-400">
+                            <div class="block px-4 py-2 text-xs border-purple-900 border-b text-purple-700">
                                 {{ __('Manage Account') }}
                             </div>
 
@@ -114,8 +114,6 @@
                                     {{ __('API Tokens') }}
                                 </x-jet-dropdown-link>
                             @endif
-
-                            <div class="border-t border-gray-100"></div>
 
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}" x-data>

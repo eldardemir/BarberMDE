@@ -18,7 +18,7 @@
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
-    <body class="font-sans antialiased" style="background-image: url('./images/background.jpg')">
+    <body style="background-image: url('./images/header.png')" class="font-sans antialiased backdrop-blur-2xl" style="background-image: url('./images/background.jpg')">
         <x-jet-banner />
 
         <div class="min-h-screen">
@@ -27,7 +27,7 @@
             <!-- Page Heading -->
             @if (isset($header))
                 <header>
-                    <div class="w-full shadow-2xl font-bold text-2xl backdrop-blur-2xl mx-auto py-6 px-4 sm:px-6 lg:px-8 border-b border-gray-700">
+                    <div  class="w-full font-bold text-2xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         <div class="container mx-auto flex justify-center text-gray-200">
                             {{ $header }}
                         </div>
