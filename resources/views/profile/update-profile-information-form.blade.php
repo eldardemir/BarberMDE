@@ -67,15 +67,16 @@
                 <x-jet-input-error for="email" class="mt-2" />
             </div>
         </x-slot>
-
-        <x-slot name="actions">
-            <x-jet-action-message class="mr-3" on="saved">
+         <x-slot name="actions">
+            <div>
+                <x-jet-action-message class="mr-3" on="saved">
                 {{ __('Saved.') }}
             </x-jet-action-message>
 
             <x-jet-button wire:loading.attr="disabled" wire:target="photo">
                 {{ __('Save') }}
             </x-jet-button>
+            </div>
         </x-slot>
     </div>
 </x-jet-form-section>
