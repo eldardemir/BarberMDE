@@ -17,8 +17,8 @@
                     <x-jet-nav-link href="{{ route('home.index') }}" :active="request()->routeIs('home.index')">
                         {{ __('Home') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('services.index') }}" :active="request()->routeIs('services.index')">
-                        {{ __('Services') }}
+                    <x-jet-nav-link href="{{ route('barbers.index') }}" :active="request()->routeIs('barbers.index')">
+                        {{ __('Barbers') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('get-haircut.index') }}"
                         :active="request()->routeIs('get-haircut.index')">
@@ -163,9 +163,9 @@
             <x-jet-responsive-nav-link href="{{ route('home.index') }}" :active="request()->routeIs('home.index')">
                 {{ __('Home') }}
             </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('services.index') }}"
-                :active="request()->routeIs('services.index')">
-                {{ __('Services') }}
+            <x-jet-responsive-nav-link href="{{ route('barbers.index') }}"
+                :active="request()->routeIs('barbers.index')">
+                {{ __('Barbers') }}
             </x-jet-responsive-nav-link>
             <x-jet-responsive-nav-link href="{{ route('get-haircut.index') }}"
                 :active="request()->routeIs('get-haircut.index')">

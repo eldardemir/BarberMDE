@@ -37,12 +37,10 @@
 
             <!-- Page Content -->
             <main>
-                <div class="py-12">
-                    <div class="max-w-9xl mx-auto sm:px-6 lg:px-8">
-                        <div class="lg:mx-0 mx-5 shadow-2xl overflow-hidden rounded-lg">
-                            <div class="text-md text-gray-200 font-semibold px-3 lg:px mt-2">
-                                {{$slot}}
-                            </div>
+                <div>
+                    <div class="lg:mx-0 mx-5 overflow-hidden rounded-lg">
+                        <div class="text-md text-gray-200 font-semibold px-3 lg:px mt-2">
+                            {{$slot}}
                         </div>
                     </div>
                 </div>

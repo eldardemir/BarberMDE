@@ -16,9 +16,25 @@
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
-    <body>
-        <div class="font-sans text-gray-900 antialiased">
-            {{ $slot }}
+    <body style="background-image: url('../images/header.png')" class="font-sans antialiased backdrop-blur-2xl" style="background-image: url('./images/background.jpg')">
+        <x-jet-banner />
+
+        <div class="min-h-screen">
+                       <main>
+                <div>
+                    <div class="lg:mx-0 mx-5 overflow-hidden rounded-lg">
+                        <div class="text-md text-gray-200 font-semibold px-3 lg:px mt-2">
+                            {{$slot}}
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
+
+        @stack('modals')
+
+        @livewireScripts
     </body>
 </html>
+
+

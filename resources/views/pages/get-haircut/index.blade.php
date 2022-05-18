@@ -106,16 +106,62 @@
                 </div>
                 <div class="w-full lg:w-1/2 xl:w-5/12 px-4">
                     <div class="bg-gray-800 relative rounded-lg p-8 sm:p-12 shadow-lg">
-                        <form>
-                            <div class="mb-6">
-                                <div class="my-3 flex justify-center">
-                                    <input class="shadow my-2 bg-gray-200 appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out" type="datetime-local" id="birthdaytime" name="birthdaytime">
+                        <form method="post" action="get-haircut">
+                            {{csrf_field()}}
+                            <div>
+                                <x-jet-label> Name </x-jet-label>
+                                <input value="{{ Auth::user()->name }}" type="text" class="shadow my-2 bg-gray-200 appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out @error('name') is-invalid @enderror"
+                                    placeholder="{{ Auth::user()->name }}" name="name">
+                                @error('name')
+                                <span class="text-red-500" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                            <div>
+                                <x-jet-label> Email </x-jet-label>
+                                <input value="{{ Auth::user()->email }}" type="text" class="shadow my-2 bg-gray-200 appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out @error('email') is-invalid @enderror"
+                                    placeholder="{{ Auth::user()->email }}" name="email">
+                                @error('email')
+                                <span class="text-red-500" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                            <div>
+                                <x-jet-label> Phone number </x-jet-label>
+                                <input type="text" class="shadow my-2 bg-gray-200 appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out @error('phone_number') is-invalid @enderror"
+                                    placeholder="Phone Number" name="phone_number">
+                                @error('phone_number')
+                                <span class="text-red-500" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+
+                            <div class="mb-6 mt-3">
+                                <x-jet-label>Date & Time</x-jet-label>
+                                <div class="mb-3 flex justify-center">
+                                    <input
+                                        name="haircut_date"
+                                        class="shadow my-2 bg-gray-200 appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out @error('haircut_date') is-invalid @enderror"
+                                        type="datetime-local" id="birthdaytime" name="birthdaytime">
                                 </div>
+                                @error('haircut_date')
+                                <span class="text-red-500" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
                             </div>
                             <div class="mb-6">
                                 <textarea
-                                    class="shadow my-2 bg-gray-200 appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
+                                    name="message" id="message" class="shadow my-2 bg-gray-200 appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out @error('message') is-invalid @enderror"
                                     rows="6" placeholder="Additional Message" class=""></textarea>
+                                    @error('message')
+                                    <span class="text-red-500" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
                             </div>
                             <div>
                                 <x-jet-button class="w-full">
